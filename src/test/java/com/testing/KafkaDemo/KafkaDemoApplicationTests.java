@@ -37,7 +37,7 @@ class KafkaDemoApplicationTests {
 
 	@Test
 	public void testSendEvent(){
-		kafkaProducerService.sendEvent(new Customer(1, "Ali", "alisasoli20@gmail.com"));
+		kafkaProducerService.sendEvent(new Customer(1, "abc", "abcdef@gmail.com"));
 		await().pollInterval(Duration.ofSeconds(3))
 				.atMost(10, TimeUnit.SECONDS)
 				.untilAsserted(() -> {
